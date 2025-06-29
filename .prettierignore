@@ -1,0 +1,19 @@
+node_modules
+.vscode
+config
+public
+scripts
+.next
+
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
+
+next.config.mjs
+jsconfig.json
+.eslintrc.js
+.lintstagedrc.js
+/src/assets/js

@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# IDE
+# JetBrains
+.idea
+# Visual Studio Code
+.vscode
+# Local env files
+
+# dependencies
+.pnp.js
+.yarn/install-state.gz
+
+# local env files
+.env*.local
