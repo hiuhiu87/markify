@@ -28,8 +28,6 @@ const HomePage = () => {
     };
   }, [handleMouseMove, handleMouseUp]);
 
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
-
   return (
     <div className={`h-screen flex w-full transition-colors duration-300 ${
       isDarkMode ? "bg-slate-900" : "bg-gray-50"
