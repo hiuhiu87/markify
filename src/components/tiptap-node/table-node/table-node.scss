@@ -1,0 +1,106 @@
+/* Table styles for TipTap editor */
+.tiptap-content table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.tiptap-content table td,
+.tiptap-content table th {
+  min-width: 1em;
+  border: 1px solid var(--border-color, #e2e8f0);
+  padding: 8px 12px;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.tiptap-content table th {
+  font-weight: 600;
+  text-align: left;
+  background-color: var(--table-header-bg, #f8fafc);
+  color: var(--table-header-text, #374151);
+}
+
+.tiptap-content table td {
+  background-color: var(--table-cell-bg, #ffffff);
+  color: var(--table-cell-text, #374151);
+}
+
+.tiptap-content table td:hover,
+.tiptap-content table th:hover {
+  background-color: var(--table-cell-hover, #f1f5f9);
+}
+
+.tiptap-content table .selectedCell {
+  background-color: var(--table-cell-selected, #dbeafe);
+  border-color: var(--table-cell-selected-border, #3b82f6);
+}
+
+.tiptap-content table .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--resize-handle-color, #3b82f6);
+  cursor: col-resize;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.tiptap-content table:hover .column-resize-handle {
+  opacity: 1;
+}
+
+.tiptap-content table .tableWrapper {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .tiptap-content table {
+  border-color: var(--dark-border-color, #374151);
+}
+
+[data-theme="dark"] .tiptap-content table td,
+[data-theme="dark"] .tiptap-content table th {
+  border-color: var(--dark-border-color, #374151);
+}
+
+[data-theme="dark"] .tiptap-content table th {
+  background-color: var(--dark-table-header-bg, #1f2937);
+  color: var(--dark-table-header-text, #f9fafb);
+}
+
+[data-theme="dark"] .tiptap-content table td {
+  background-color: var(--dark-table-cell-bg, #111827);
+  color: var(--dark-table-cell-text, #f9fafb);
+}
+
+[data-theme="dark"] .tiptap-content table td:hover,
+[data-theme="dark"] .tiptap-content table th:hover {
+  background-color: var(--dark-table-cell-hover, #374151);
+}
+
+[data-theme="dark"] .tiptap-content table .selectedCell {
+  background-color: var(--dark-table-cell-selected, #1e3a8a);
+  border-color: var(--dark-table-cell-selected-border, #3b82f6);
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .tiptap-content table {
+    font-size: 0.875rem;
+  }
+  
+  .tiptap-content table td,
+  .tiptap-content table th {
+    padding: 6px 8px;
+  }
+}
